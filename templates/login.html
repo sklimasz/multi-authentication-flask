@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    {% if error %}
+        <p>{{ error }}</p>
+    {% endif %}
+    <form method="POST" action="/login">
+        <label for="username">Username:</label>
+        <input type="text" id="username_box" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password_box" name="password" required><br>
+        <br></br>
+        <input type="submit" value="Log in">
+        <a href="http://localhost:5000/register">
+            <input type="button" value="Register" />
+         </a>
+    </form>
+</body>
+</html>

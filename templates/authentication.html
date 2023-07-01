@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .number-input {
+      width: 200px;
+      padding: 5px;
+      text-align: center;
+      letter-spacing: 15px;
+    }
+    body {
+            background-color: black;
+            color: white
+    }
+  </style>
+</head>
+<body>
+  <p>One more step</p>
+  <p>Authenticate via your token</p>
+  <form method="POST" action="/authentication">
+    <label for="auth">TOTP Token:</label>
+    <input class="number-input" name="auth" type="text" pattern="\d{6}" maxlength="6" required/>
+    <br></br>
+    <label for="pushcode">Push Code:</label>
+    <input type="text" id="pushcode_box" name="pushcode" required><br>
+    <br></br>
+    <input type="submit" value="Authenticate">
+  </form>
+
+</body>
+</html>

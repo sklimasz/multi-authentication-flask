@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-color: black;
+            color: white
+        }
+    </style>
+    <title>Register</title>
+</head>
+<body>
+    <form method="POST" action="/register">
+        <label for="register_username">Create username:</label>
+        <input type="text" id="register_username_box" name="register_username" required><br>
+        <label for="register_password">Create password:</label>
+        <input type="password" id="register_password_box" name="register_password" required><br>
+        <label for="repeat_password">Repeat password:</label>
+        <input type="password" id="repeat_password_box" name="repeat_password"><br>
+        <label for="apikey">Your PushBullet API key:</label>
+        <input type="text" id="apikey_box" name="apikey"><br>
+        <br></br>
+        <input type="submit" value="Register">
+        {% if error %}
+            <p>{{ error }}</p>
+        {% endif %}
+    </form>
+</body>
+</html>
